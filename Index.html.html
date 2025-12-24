@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Edwin & Tati | Nuestra Boda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f7f5f2;
+      color: #333;
+      text-align: center;
+      line-height: 1.7;
+    }
+
+    /* HERO */
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+        url("https://images.unsplash.com/photo-1519741497674-611481863552") center/cover no-repeat;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero h2 {
+      letter-spacing: 4px;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      margin-bottom: 15px;
+    }
+
+    .date {
+      font-size: 1.6rem;
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .time-box {
+      background: rgba(255,255,255,0.2);
+      padding: 20px 25px;
+      border-radius: 10px;
+      min-width: 110px;
+    }
+
+    .time-box span {
+      display: block;
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+
+    .time-box small {
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      font-size: 1.2rem;
+    }
+
+    /* LOCATION */
+    .location p {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .map-btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 15px 30px;
+      background: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+    }
+
+    .map-btn:hover {
+      background: #555;
+    }
+
+    .note {
+      margin-top: 30px;
+      background: #eee;
+      padding: 25px;
+      border-radius: 12px;
+      font-size: 1.1rem;
+    }
+
+    /* RSVP */
+    form {
+      max-width: 450px;
+      margin: auto;
+      margin-top: 40px;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #555;
+    }
+
+    footer {
+      padding: 40px;
+      font-size: 1rem;
+      color: #777;
+    }
+
+    audio {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      z-index: 100;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Música -->
+  <audio controls autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- HERO -->
+  <header>
+    <div class="hero">
+      <h2>NOS CASAMOS</h2>
+      <h1>Edwin & Tati</h1>
+      <div class="date">15 de marzo de 2026</div>
+
+      <div class="countdown">
+        <div class="time-box"><span id="days">0</span><small>DÍAS</small></div>
+        <div class="time-box"><span id="hours">0</span><small>HORAS</small></div>
+        <div class="time-box"><span id="minutes">0</span><small>MINUTOS</small></div>
+        <div class="time-box"><span id="seconds">0</span><small>SEGUNDOS</small></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section>
+    <h3>Con mucha alegría</h3>
+    <p>
+      Queremos invitarte a compartir con nosotros uno de los días más importantes
+      de nuestras vidas. Gracias por acompañarnos en este nuevo comienzo.
+    </p>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="location">
+    <h3>Lugar del evento</h3>
+
+    <p><strong>El Morrito, Lourdes</strong></p>
+    <p>Kilómetro 27½, Carretera Panamericana</p>
+    <p>Opico, El Salvador</p>
+
+    <a
+      class="map-btn"
+      href="https://www.google.com/maps/search/?api=1&query=El+Morrito+Lourdes+Opico+El+Salvador"
+      target="_blank">
+      📍 Ver ubicación en Google Maps
+    </a>
+
+    <div class="note">
+      💛 <strong>Nota importante:</strong><br>
+      Con mucho cariño, este evento ha sido planeado solo para adultos.
+      <br><strong>No se permiten niños.</strong>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section>
+    <h3>Confirmar asistencia</h3>
+
+    <form onsubmit="submitRSVP(event)">
+      <input type="text" id="name" placeholder="Nombre completo" required>
+
+      <select id="attendance" required>
+        <option value="">¿Asistirás?</option>
+        <option value="Sí">Sí, con gusto asistiré</option>
+        <option value="No">No podré asistir</option>
+      </select>
+
+      <button type="submit">Confirmar RSVP</button>
+    </form>
+
+    <p id="rsvpMessage"></p>
+  </section>
+
+  <footer>
+    Edwin & Tati · 15.03.2026
+  </footer>
+
+  <script>
+    // Countdown
+    const weddingDate = new Date("March 15, 2026 00:00:00").getTime();
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+      if (distance < 0) return;
+
+      document.getElementById("days").innerText =
+        Math.floor(distance / (1000 * 60 * 60 * 24));
+      document.getElementById("hours").innerText =
+        Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      document.getElementById("minutes").innerText =
+        Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      document.getElementById("seconds").innerText =
+        Math.floor((distance % (1000 * 60)) / 1000);
+    }, 1000);
+
+    // RSVP
+    function submitRSVP(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const attendance = document.getElementById("attendance").value;
+
+      document.getElementById("rsvpMessage").innerText =
+        `Gracias ${name}. Tu respuesta ha sido registrada 💖`;
+
+      e.target.reset();
+    }
+  </script>
+
+</body>
+</html>
+
